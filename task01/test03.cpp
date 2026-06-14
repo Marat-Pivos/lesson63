@@ -20,7 +20,7 @@ int main() {
 	st01.age = 14;
 	st01.alive = true;
 	st01.mark = 9.5;
-	st01.gender = 'm';
+	st01.gender = 'm'; 
 
 	st02.name = "anna";
 	st02.age = 13;
