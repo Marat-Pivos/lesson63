@@ -7,16 +7,21 @@ class Student {
 public:
 	string name;
 	int age;
-	double mark;
+	//double mark;
 	char gender;
 	bool alive;
+
+	int* marks;
+	int count;
 
 	Student() {
 		cout << "Student default constructor\n";
 		name = "";
 		age = 0;
 		alive = false;
-		mark = 0;
+		//mark = 0;
+		marks = NULL;
+		count = 0;
 		gender = '\0';
 	}
 
@@ -25,7 +30,9 @@ public:
 		name = nm;
 		age = ag;
 		alive = false;
-		mark = 0;
+		//mark = 0;
+		marks = NULL;
+		count = 0;
 		gender = '\0';
 	}
 
@@ -34,7 +41,9 @@ public:
 		name = nm;
 		age = ag;
 		alive = a;
-		mark = mrk;
+		//mark = mrk;
+		marks = NULL;
+		count = 0;
 		gender = gndr;
 	}
 
@@ -43,7 +52,9 @@ public:
 		name = student->name;
 		age = student->age;
 		alive = student->alive;
-		mark = student->mark;
+		//mark = student->mark;
+		marks = NULL;
+		count = 0;
 		gender = student->gender;
 	}
 
