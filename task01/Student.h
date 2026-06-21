@@ -10,7 +10,6 @@ public:
 	//double mark;
 	char gender;
 	bool alive;
-
 	int* marks;
 	int count;
 
@@ -36,7 +35,7 @@ public:
 		gender = '\0';
 	}
 
-	Student(string nm, int ag, bool a, char gndr, double mrk) {
+	Student(string nm, int ag, bool a, char gndr, int marks, int count) {
 		cout << "Student constructor with atguments\n";
 		name = nm;
 		age = ag;
@@ -68,7 +67,7 @@ public:
 		string s = "";
 
 		s += "Student: " + name + ", age = " + to_string(age) + ", gender = " + gender
-			+ ", mark = " + to_string(mark) + ", alive = " + (alive ? "yes" : "no");
+			+ ", mark = " + to_string() + ", alive = " + (alive ? "yes" : "no");
 
 		return s;
 	}
