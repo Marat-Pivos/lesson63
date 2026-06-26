@@ -135,6 +135,7 @@
     <ClCompile Include="test07.cpp" />
     <ClCompile Include="test08.cpp" />
     <ClCompile Include="test09.cpp" />
+    <ClCompile Include="test10.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Group.h" />

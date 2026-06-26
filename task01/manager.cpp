@@ -3,7 +3,7 @@
 double Menager::calculateAvgMark(Student* student) {
 	double s = 0;
 
-	for (int j = 0; j < student->getCountMark(); j++) { 
+	for (int j = 0; j < student->getCountMark(); j++) {
 		s += student->getMarks()[j];
 		//s += *(student->getMarks() + j);
 	}
