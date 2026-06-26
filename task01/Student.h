@@ -4,7 +4,7 @@
 using namespace std;
 
 class Student {
-public:
+private:
 	string name;
 	int age;
 	//double mark;
@@ -13,62 +13,33 @@ public:
 	int* marks;
 	int count;
 
-	Student() {
-		cout << "Student default constructor\n";
-		name = "";
-		age = 0;
-		alive = false;
-		//mark = 0;
-		marks = NULL;
-		count = 0;
-		gender = '\0';
-	}
+public:
+	// default-constructor
+	Student();
 
-	Student(string nm, int ag) {
-		cout << "Student constructor with atguments\n";
-		name = nm;
-		age = ag;
-		alive = false;
-		//mark = 0;
-		marks = NULL;
-		count = 0;
-		gender = '\0';
-	}
+	Student(string nm, int ag);
+	Student(int ag, string nm);
 
-	Student(string nm, int ag, bool a, char gndr, int marks, int count) {
-		cout << "Student constructor with atguments\n";
-		name = nm;
-		age = ag;
-		alive = a;
-		//mark = mrk;
-		marks = NULL;
-		count = 0;
-		gender = gndr;
-	}
+	// canonical constructor
+	Student(string nm, int ag, char gndr, bool a, int* mrks, int cnt);
 
-	Student(const Student* student) {
-		cout << "Student copy-constructor\n";
-		name = student->name;
-		age = student->age;
-		alive = student->alive;
-		//mark = student->mark;
-		marks = NULL;
-		count = 0;
-		gender = student->gender;
-	}
+	// copy-constructor
+	Student(const Student* student);
 
-	~Student() {
-		cout << "Student destructor\n";
+	// destructor
+	~Student();
 
-	}
+	string getName();
+	void setName(string nm);
+	int getAge();
+	void setAge(int a);
+	char getGender();
+	void setGender(char g);
+	bool isAlive();
+	void setAlive(bool a);
+	int getCountMark();
+	int* getMarks();
+	void setMarks(int* m, int c);
 
-	
-	string toString() {
-		string s = "";
-
-		s += "Student: " + name + ", age = " + to_string(age) + ", gender = " + gender
-			+ ", mark = " + to_string() + ", alive = " + (alive ? "yes" : "no");
-
-		return s;
-	}
+	string toString();
 };
